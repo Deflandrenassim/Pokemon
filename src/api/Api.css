@@ -1,0 +1,7 @@
+.ul_card{
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 function CardPicture({ img }) {
   return (
-    <img src={img} alt="" />
+    <img className="card_picture" src={img} alt="" />
   );
 }
 
