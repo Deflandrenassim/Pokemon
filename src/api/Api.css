@@ -1,7 +1,9 @@
 .ul_card{
     display: flex;
-    background-color: antiquewhite;
     flex-direction: row;
     flex-wrap: wrap;
-
+    list-style-type: none;
+}
+.li_card{
+    list-style-type: none;
 }

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Api.css';
 import Axios from 'axios';
+import CardContainer from '../components/Card/CardContainer';
 import Card from '../components/Card/Card';
 import CardPicture from '../components/Card/CardPicture';
 import CardName from '../components/Card/CardName';
+import Button from '../components/Button/Button';
 
 function Api() {
   const [pokemons, setPokemons] = useState();
@@ -31,19 +33,23 @@ function Api() {
     <div className="App">
       {pokemons
             && (
-
             <ul className="ul_card">
               {pokemons.map((pokemon) => (
-                <Card key={pokemon.id}>
-                  <CardName>
-                    {pokemon.name}
-                  </CardName>
-                  <CardPicture img={pokemon.sprites.back_default} />
-                  <div className="div">
-                    Xp :
-                    { ' '}
-                    {pokemon.base_experience}
-                  </div>
+                <Card>
+                  <li className="li_card" key={pokemon.id}>
+                    <CardContainer>
+                      <CardPicture img={pokemon.sprites.front_default} />
+                      <CardName>
+                        {pokemon.name}
+                      </CardName>
+                      <div className="div">
+                        Experience  :
+                        { ' '}
+                        {pokemon.base_experience}
+                      </div>
+                      <Button> Plus de détail </Button>
+                    </CardContainer>
+                  </li>
                 </Card>
               ))}
             </ul>
