@@ -6,9 +6,17 @@ import Card from '../components/Card/Card';
 import CardPicture from '../components/Card/CardPicture';
 import CardName from '../components/Card/CardName';
 import Button from '../components/Button/Button';
+import ModalPokemon from '../container/modal/ModalPokemon';
 
 function Api() {
   const [pokemons, setPokemons] = useState();
+  const [isHidden, setIsHidden] = useState(true);
+
+  const HandleModal = () => {
+    console.log('hello');
+    setIsHidden(!isHidden);
+    console.log(isHidden);
+  };
 
   const callApi = async (name) => { // call api par name
     const { data: pokemon } = await Axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
@@ -42,18 +50,20 @@ function Api() {
                       <CardName>
                         {pokemon.name}
                       </CardName>
-                      <div className="div">
-                        Experience  :
-                        { ' '}
-                        {pokemon.base_experience}
-                      </div>
-                      <Button> Plus de détail </Button>
+                      {isHidden
+                        ? <Button functionToCall={HandleModal}> Plus de détail </Button>
+                        : (
+                          <ModalPokemon
+                            id={pokemon.id}
+                            xp={pokemon.base_experience}
+                          />
+                        )}
+
                     </CardContainer>
                   </li>
                 </Card>
               ))}
             </ul>
-
             )}
 
     </div>

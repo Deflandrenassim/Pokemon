@@ -1,8 +1,9 @@
 import React from 'react';
+import './Button.css';
 
-function Button({ children }) {
+function Button({ children, functionToCall }) {
   return (
-    <button type="submit">
+    <button className="button" onClick={functionToCall} type="button">
       {children}
     </button>
   );
