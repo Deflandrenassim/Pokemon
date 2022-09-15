@@ -3,6 +3,7 @@ import './Api.css';
 import Axios from 'axios';
 import CardContainer from '../components/Card/CardContainer';
 import Card from '../components/Card/Card';
+// import Type from '../components/Type/Type';
 import CardPicture from '../components/Card/CardPicture';
 import CardName from '../components/Card/CardName';
 import Button from '../components/Button/Button';
@@ -53,10 +54,15 @@ function Api() {
                       {isHidden
                         ? <Button functionToCall={HandleModal}> Plus de détail </Button>
                         : (
-                          <ModalPokemon
-                            id={pokemon.id}
-                            xp={pokemon.base_experience}
-                          />
+                          <div>
+                            <ModalPokemon
+                              id={pokemon.id}
+                              xp={pokemon.base_experience}
+                            />
+                            <Button functionToCall={HandleModal}> retour</Button>
+                            {/* <Type type={pokemon.types} /> */}
+
+                          </div>
                         )}
 
                     </CardContainer>

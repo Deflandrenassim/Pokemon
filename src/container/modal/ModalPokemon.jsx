@@ -16,5 +16,4 @@ function ModalPokemon({ children, xp, id }) {
     </div>
   );
 }
-
 export default ModalPokemon;
