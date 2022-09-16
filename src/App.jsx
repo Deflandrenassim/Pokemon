@@ -1,11 +1,11 @@
 import React from 'react';
-import Api from './api/Api';
+import PokemonPage from './pokemonPage/PokemonPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Api />
+      <PokemonPage />
     </div>
   );
 }
