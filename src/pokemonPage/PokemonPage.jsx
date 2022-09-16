@@ -45,8 +45,6 @@ function PokemonPage() {
               {pokemons.map((pokemon) => (
                 <Pokemon
                   pokemon={pokemon}
-                  // name={pokemon.name}
-                  // picture={pokemon.sprites.front_default}
                   functionToCall={HandleModal}
                 />
               ))}
