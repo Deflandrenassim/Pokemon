@@ -2,16 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './PokemonPage.css';
 import Axios from 'axios';
 import Pokemon from '../container/pokemon/Pokemon';
+import ModalPokemon from '../container/modal/ModalPokemon';
+// import Button from '../components/Button/Button';
 
 let TableauPokemons = [];
 
 function PokemonPage() {
   const [pokemons, setPokemons] = useState([]);
-  const [isHidden, setIsHidden] = useState(false);
-  const HandleModal = () => {
-    console.log(isHidden);
-    setIsHidden(!isHidden);
-  };
+  // const [isBool] = useState(false);
 
   const callApi = async (name) => { // call api par name
     const { data: pokemon } = await Axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
@@ -22,11 +20,9 @@ function PokemonPage() {
   const getAllPokemonsInfo = async (results) => { // send 20 poke by name
     Promise.all(results.map(({ name }) => callApi(name)))
       .then((values) => {
-        // setPokemons(values);
         TableauPokemons = [...values];
-        console.log(TableauPokemons);
+        // console.log(TableauPokemons);
         setPokemons(TableauPokemons);
-        console.log(`${values}ma values `);
       });
   };
 
@@ -43,10 +39,22 @@ function PokemonPage() {
             && (
             <ul className="ul_card">
               {pokemons.map((pokemon) => (
-                <Pokemon
-                  pokemon={pokemon}
-                  functionToCall={HandleModal}
-                />
+                <div>
+                  <Pokemon
+                    pokemon={pokemon}
+                  />
+                  <ModalPokemon
+                    modalPokemon={pokemon}
+                  />
+                  {/* { isBool ? (
+                    <Button />
+                  )
+                    : (
+                      <ModalPokemon
+                        modalPokemon={pokemon}
+                      />
+                    )} */}
+                </div>
               ))}
             </ul>
             )}

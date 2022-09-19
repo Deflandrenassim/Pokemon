@@ -3,11 +3,8 @@ import Card from '../../components/Card/Card';
 import CardContainer from '../../components/Card/CardContainer';
 import CardPicture from '../../components/Card/CardPicture';
 import CardName from '../../components/Card/CardName';
-import Button from '../../components/Button/Button';
 
-function Pokemon({
-  children, pokemon,
-}) {
+function Pokemon({ children, pokemon }) {
   useEffect(() => {
     console.log(pokemon);
   });
@@ -23,7 +20,7 @@ function Pokemon({
           <CardName>
             {pokemon.name}
           </CardName>
-          <Button> en savoir plus</Button>
+
         </CardContainer>
       </Card>
       {children}
