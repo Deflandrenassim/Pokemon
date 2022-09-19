@@ -1,8 +1,9 @@
 import React from 'react';
+import './Card.css';
 
-function CardPicture({ img }) {
+function CardPicture({ img, size, color }) {
   return (
-    <img className="card_picture" src={img} alt="" />
+    <img className={`card_picture ${size} ${color}`} src={img} alt="" />
   );
 }
 

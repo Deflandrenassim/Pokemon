@@ -1,27 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import './Pokemon.css';
 import Card from '../../components/Card/Card';
 import CardContainer from '../../components/Card/CardContainer';
 import CardPicture from '../../components/Card/CardPicture';
 import CardName from '../../components/Card/CardName';
 
 function Pokemon({ children, pokemon }) {
-  useEffect(() => {
-    console.log(pokemon);
-  });
-
   return (
-    <div className="modal_pokemon">
+    <div className="pokemon">
       <Card>
         <CardContainer>
           <CardPicture
             img={pokemon.sprites.front_default}
           />
-
+          #
+          {pokemon.id}
+          <CardName>
+            {pokemon.name}
+          </CardName>
         </CardContainer>
+
       </Card>
-      <CardName>
-        {pokemon.name}
-      </CardName>
+
       {children}
     </div>
   );

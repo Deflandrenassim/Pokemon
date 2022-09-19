@@ -3,7 +3,6 @@ import './PokemonPage.css';
 import Axios from 'axios';
 import Pokemon from '../container/pokemon/Pokemon';
 import ModalPokemon from '../container/modal/ModalPokemon';
-// import Button from '../components/Button/Button';
 
 let TableauPokemons = [];
 
@@ -46,14 +45,6 @@ function PokemonPage() {
                   <ModalPokemon
                     modalPokemon={pokemon}
                   />
-                  {/* { isBool ? (
-                    <Button />
-                  )
-                    : (
-                      <ModalPokemon
-                        modalPokemon={pokemon}
-                      />
-                    )} */}
                 </div>
               ))}
             </ul>

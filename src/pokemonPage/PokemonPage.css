@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
+    justify-content: center;
 }
 .li_card{
     list-style-type: none;

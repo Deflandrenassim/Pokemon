@@ -2,5 +2,14 @@
     cursor: pointer;
     padding: 10px;
     margin-top: 20px;
+    border-radius: 10px;
     background-color: rgb(247, 216, 197);
+}
+.button.appareance{
+    font-size: 15px;
+    border-radius: 100px;
+    background-color: rgb(216, 236, 236);
+}
+.button.appareance:hover{
+    background-color: rgb(180, 193, 193);
 }
