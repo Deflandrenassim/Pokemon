@@ -21,13 +21,15 @@ function ModalPokemon({ children, modalPokemon }) {
           </div>
         ) : (
           <div className="modal_pokemon">
-            {' '}
             Xp :
+            {' '}
             {modalPokemon.base_experience}
             <div>
               types :
+              {' '}
               {modalPokemon.types[0].type.name}
             </div>
+            <Button functionToCall={HandleChangeModal}> Retour </Button>
           </div>
         )}
       {children}

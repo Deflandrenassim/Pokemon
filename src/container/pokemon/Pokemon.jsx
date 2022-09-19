@@ -12,17 +12,16 @@ function Pokemon({ children, pokemon }) {
   return (
     <div className="modal_pokemon">
       <Card>
-        {pokemon.id}
         <CardContainer>
           <CardPicture
             img={pokemon.sprites.front_default}
           />
-          <CardName>
-            {pokemon.name}
-          </CardName>
 
         </CardContainer>
       </Card>
+      <CardName>
+        {pokemon.name}
+      </CardName>
       {children}
     </div>
   );
