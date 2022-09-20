@@ -24,9 +24,11 @@
 .card_picture{
     height: 100px;
     width: 100px;
-}
-.card_picture.size{ 
-    
-    height: 200px; 
-    width: 220px;
+} 
+
+@media screen and (max-width: 900px) and (min-width : 460px){
+    .card_picture.size{
+        height: 60px; 
+        width: 60px;
+    }
 }
