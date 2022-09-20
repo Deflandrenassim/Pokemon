@@ -2,3 +2,8 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+.input{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

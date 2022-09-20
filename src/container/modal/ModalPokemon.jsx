@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Modal.css';
 import Button from '../../components/Button/Button';
 import CardPicture from '../../components/Card/CardPicture';
@@ -9,10 +9,6 @@ function ModalPokemon({ children, modalPokemon }) {
   const HandleChangeModal = () => {
     setIsBool(!isBool);
   };
-
-  useEffect(() => {
-    console.log(isBool);
-  });
   return (
     <div className="modal">
       {isBool
