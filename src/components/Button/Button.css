@@ -10,6 +10,17 @@
     border-radius: 100px;
     background-color: rgb(216, 236, 236);
 }
+.button.active:focus{
+        background-color: rgb(54, 209, 157);
+    }
 .button.appareance:hover{
     background-color: rgb(180, 193, 193);
+}
+/* .null{
+    background-color: rgb(222, 193, 193);
+} */
+
+.all{
+    background-color:rgb(219, 142, 158);
+
 }

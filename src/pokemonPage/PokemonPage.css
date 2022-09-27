@@ -12,9 +12,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .button_all{
     display: flex;
     justify-content: center;
+}
+.null{
+    background-color: rgb(222, 193, 193);
+}
+.active{
+    background-color: rgb(102, 233, 189);
 }
