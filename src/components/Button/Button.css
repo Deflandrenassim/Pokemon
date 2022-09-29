@@ -10,7 +10,7 @@
     border-radius: 100px;
     background-color: rgb(216, 236, 236);
 }
-.button.active:focus{
+.button.active{
         background-color: rgb(54, 209, 157);
     }
 .button.appareance:hover{

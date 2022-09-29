@@ -11,9 +11,9 @@ let TableauPokemons = [];
 
 function PokemonPage() {
   const [pokemons, setPokemons] = useState([]);
+  const [newPokemons, setNewPokemons] = useState([]);
   const [searchPokemon, setSearchPokemon] = useState('');
   const [types, setTypes] = useState([]);
-  const [pokemonFilter, setPokemonFilter] = useState(null);
   const [btnState, setBtnState] = useState(false);
 
   const callApi = async (name) => { // call api par name
@@ -21,41 +21,41 @@ function PokemonPage() {
     return pokemon;
   };
 
-  const toggleActive = () => {
-    setBtnState(!btnState);
-    console.log(btnState);
-  };
-
   const getAllPokemonsInfo = async (results) => {
     Promise.all(results.map(({ name }) => callApi(name)))
       .then((values) => {
         TableauPokemons = [...values];
         setPokemons(TableauPokemons);
+        setNewPokemons(TableauPokemons);
+        console.log(values);
       });
   };
-  const handleAllPokemons = (event) => {
-    event.currentTarget.classList.toggle('all');
-    event.currentTarget.classList.remove('null');
-    setPokemonFilter(null);
-  };
-
-  const SearchByPokemon = (e) => {
-    setSearchPokemon(e.target.value);
-    console.log(types);
-  };
-
-  const filterByType = (ev) => {
-    const currentType = ev.currentTarget.value;
-    const res = [];
-    for (let i = 0; i < pokemons.length; i += 1) {
-      for (let j = 0; j < pokemons[i].types.length; j += 1) {
-        if (currentType === pokemons[i].types[j].type.name) {
-          res.push(pokemons[i]);
-        }
-      }
+  const contains = (typesList, value) => {
+    for (let i = 0; i < typesList.length; i += 1) {
+      if (typesList[i].type.name === value) { return true; }
     }
-    setPokemonFilter(res);
-    toggleActive();
+    return false;
+  };
+
+  const handleFilterClick = (e) => {
+    setBtnState(!btnState);
+    if (e.target.value === 'reset') {
+      setNewPokemons(pokemons);
+    } else {
+      const newTabPokemons = pokemons.filter((pokemon) => (
+        contains(pokemon.types, e.target.value)
+      ));
+      setNewPokemons(newTabPokemons);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setSearchPokemon(e.target.value);
+    const newTabPokemons = newPokemons.filter((newPokemon) => (
+      newPokemon.name.slice(0, e.target.value.length) === e.target.value
+    ));
+
+    setNewPokemons(newTabPokemons);
   };
 
   useEffect(() => {
@@ -75,7 +75,7 @@ function PokemonPage() {
     <div className="App">
       <div className="input">
         <Textfield
-          onChange={SearchByPokemon}
+          onChange={handleInputChange}
           value={searchPokemon}
         />
         <div>
@@ -86,7 +86,7 @@ function PokemonPage() {
                 key={key}
                 active={btnState ? 'active' : 'null'}
                 type="button"
-                functionToCall={filterByType}
+                functionToCall={handleFilterClick}
                 value={currentType.name}
               >
                 {currentType.name}
@@ -95,40 +95,25 @@ function PokemonPage() {
             ))}
 
             <div className="button_all">
-              <Button functionToCall={handleAllPokemons}> All Pokemons </Button>
+              <Button value="reset" functionToCall={handleFilterClick}> All Pokemons </Button>
             </div>
           </div>
         </div>
       </div>
-      {pokemons
-            && (
-            <ul className="ul_card">
-              {pokemonFilter != null
-                ? pokemonFilter.map((pokemon) => (
-                  <div>
-                    <Pokemon
-                      pokemon={pokemon}
-                    />
-                    <ModalPokemon
-                      modalPokemon={pokemon}
-                    />
-                  </div>
-                ))
-                : pokemons.filter((searchName) => searchName.species.name.includes(searchPokemon))
-                  .map((pokemon) => (
-                    <div>
-
-                      <Pokemon
-                        pokemon={pokemon}
-                      />
-                      <ModalPokemon
-                        modalPokemon={pokemon}
-                      />
-                    </div>
-                  ))}
-
-            </ul>
-            )}
+      <ul className="ul_card">
+        {
+        newPokemons.map((pokemon) => (
+          <div>
+            <Pokemon
+              pokemon={pokemon}
+            />
+            <ModalPokemon
+              modalPokemon={pokemon}
+            />
+          </div>
+        ))
+      }
+      </ul>
       <ScrollTop />
     </div>
   );
