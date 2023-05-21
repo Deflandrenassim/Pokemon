@@ -22,6 +22,8 @@
         "react/no-array-index-key": "off",
         "react/jsx-indent": "off",
         "indent": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "prefer-default-export": "off",
+        "eol-last": "off"
     }
 }
