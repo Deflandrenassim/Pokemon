@@ -27,7 +27,6 @@ function PokemonPage() {
         TableauPokemons = [...values];
         setPokemons(TableauPokemons);
         setNewPokemons(TableauPokemons);
-        console.log(values);
       });
   };
   const contains = (typesList, value) => {
@@ -102,17 +101,17 @@ function PokemonPage() {
       </div>
       <ul className="ul_card">
         {
-        newPokemons.map((pokemon) => (
-          <div>
-            <Pokemon
-              pokemon={pokemon}
-            />
-            <ModalPokemon
-              modalPokemon={pokemon}
-            />
-          </div>
-        ))
-      }
+          newPokemons.map((pokemon) => (
+            <div>
+              <Pokemon
+                pokemon={pokemon}
+              />
+              <ModalPokemon
+                modalPokemon={pokemon}
+              />
+            </div>
+          ))
+        }
       </ul>
       <ScrollTop />
     </div>
