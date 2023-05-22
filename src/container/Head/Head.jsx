@@ -5,17 +5,24 @@ import Header from '../../components/header/Header';
 function Head() {
     return (
         <Header>
-            <div className="header_center">
-                <div className="header_acc">
-                    Accueil
+            <div className="header_align">
+                <div className="header_title">
+                    <span> NassPoké</span>
                 </div>
-                <div className="header_all">
-                    All Pokemon
+                <div className="header_center">
+                    <div className="header_acc">
+                        Accueil
+                    </div>
+                    <div className="header_all">
+                        All Pokemon
+                    </div>
                 </div>
-            </div>
 
-            <div className="header_logo">
-                <TbPokeball className="poke" />
+                <div className="header_logo">
+                    <span className="header_poke">
+                        <TbPokeball />
+                    </span>
+                </div>
             </div>
         </Header>
     );

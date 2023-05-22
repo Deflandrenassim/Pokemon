@@ -1,10 +1,39 @@
 .header_center {
     display: flex;
-    justify-content: center;
-    padding: 14px;
+    justify-items: center;
+}
+
+.header_title {
+    font-size: 20px;
+    color: rgb(215, 55, 55);
+}
+
+.header_align {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh;
 }
 
 .header_all {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.header_logo {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.header_poke {
+    font-size: xx-large;
+    transition: transform .7s ease-in-out;
+    cursor: pointer;
+}
+
+.header_poke:hover {
+    transform: rotate(360deg);
+    background-color: rgb(215, 55, 55);
+    border-radius: 59%;
 }
