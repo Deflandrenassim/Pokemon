@@ -3,7 +3,7 @@ import './PokemonPage.css';
 import Axios from 'axios';
 import ScrollTop from '../components/ScrollTop/ScrollTop';
 import Pokemon from '../container/pokemon/Pokemon';
-import ModalPokemon from '../container/modal/ModalPokemon';
+// import ModalPokemon from '../container/modal/ModalPokemon';
 import Textfield from '../components/Texfield/Textfield';
 import Button from '../components/Button/Button';
 
@@ -105,9 +105,6 @@ function PokemonPage() {
             <div>
               <Pokemon
                 pokemon={pokemon}
-              />
-              <ModalPokemon
-                modalPokemon={pokemon}
               />
             </div>
           ))

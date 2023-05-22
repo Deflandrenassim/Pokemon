@@ -1,0 +1,10 @@
+.header_center {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+
+.header_all {
+    padding-left: 15px;
+    padding-right: 15px;
+}
