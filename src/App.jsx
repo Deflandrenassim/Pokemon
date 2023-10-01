@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from './container/Head/Head';
-import PokemonPage from './pokemonPage/PokemonPage';
+import PokemonPage from './pages/PokemonPage';
 import './App.css';
 
 function App() {

@@ -24,6 +24,9 @@
         "indent": "off",
         "react/react-in-jsx-scope": "off",
         "prefer-default-export": "off",
-        "eol-last": "off"
+        "eol-last": "off",
+        "import/prefer-default-export": "off",
+        "semi": "off",
+        "padded-blocks": "off"
     }
 }
