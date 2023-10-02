@@ -9,14 +9,6 @@ function Head() {
                 <div className="header_title">
                     <span> NassPoké</span>
                 </div>
-                <div className="header_center">
-                    <div className="header_acc">
-                        Accueil
-                    </div>
-                    <div className="header_all">
-                        All Pokemon
-                    </div>
-                </div>
 
                 <div className="header_logo">
                     <span className="header_poke">

@@ -1,25 +1,5 @@
-.ul_card{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: center;
-}
-.li_card{
-    list-style-type: none;
-}
-.input{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.button_all{
-    display: flex;
-    justify-content: center;
-}
-.null{
-    background-color: rgb(222, 193, 193);
-}
-.active{
-    background-color: rgb(102, 233, 189);
+.pokemon_page {
+    height: 100%;
+    width: 100%;
+    background-color: #313131;
 }
