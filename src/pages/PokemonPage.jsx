@@ -1,14 +1,14 @@
 import './PokemonPage.css';
-import { useGetAllPokemons } from '../hooks/useGetAllPokemons';
+import { Pokemon } from '../container/pokemons/Pokemon';
 
 function PokemonPage() {
-  const pokemons = useGetAllPokemons();
-  console.log(pokemons);
+
   return (
     <div className="pokemon_page">
-      <div> test </div>
-      <div> test </div>
-      <div> test </div>
+      <div className="pokemon_page_background">
+        <Pokemon />
+
+      </div>
     </div>
 
   )

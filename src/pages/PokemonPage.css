@@ -1,5 +1,12 @@
 .pokemon_page {
+    /* height: 100%;
+    width: 100%; */
+
+}
+
+.pokemon_page_background {
+
     height: 100%;
     width: 100%;
-    background-color: #313131;
+    background: url(../../public/background_pokemons.png);
 }
