@@ -1,10 +1,13 @@
-.container_pokemon {
+.container_pokemons {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
-    padding-left: 20px;
-    padding-right: 20px;
+}
+
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25rem;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
 
 }

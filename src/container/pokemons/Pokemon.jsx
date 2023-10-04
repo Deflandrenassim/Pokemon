@@ -8,13 +8,16 @@ export function Pokemon() {
   console.log(pokemons);
 
   return (
-    <div>
-      {pokemons.map((pokemon) => (
-        <div>
-          <Picture src={pokemon.sprites.front_default} alt="pokemon_front" />
-        </div>
+    <div className="container_pokemons">
+      <div className="pokemons">
+        {pokemons.map((pokemon) => (
+          <div>
+            <Picture src={pokemon.sprites.front_default} alt="pokemon_front" size="size" />
+            <div> TESSST  </div>
+          </div>
 
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

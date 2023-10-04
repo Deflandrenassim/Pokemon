@@ -1,8 +1,8 @@
 import './Picture.css';
 
-export function Picture({ src, alt }) {
+export function Picture({ src, alt, size }) {
     return (
-        <img src={src} alt={alt} />
+        <img className={`picture ${size}`} src={src} alt={alt} />
     )
 
 }
