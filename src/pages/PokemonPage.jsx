@@ -1,12 +1,12 @@
 import './PokemonPage.css';
-import { Pokemon } from '../container/pokemons/Pokemon';
+import { Pokemons } from '../container/pokemons/Pokemon';
 
 function PokemonPage() {
 
   return (
     <div className="pokemon_page">
       <div className="pokemon_page_background">
-        <Pokemon />
+        <Pokemons />
 
       </div>
     </div>

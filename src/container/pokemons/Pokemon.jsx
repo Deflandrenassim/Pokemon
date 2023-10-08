@@ -2,22 +2,28 @@ import React from 'react';
 import './Pokemon.css';
 import { useGetAllPokemons } from '../../hooks/useGetAllPokemons';
 import { Picture } from '../../components/Picture/Picture';
+import { VariantPokemon } from './VariantPokemon';
 
-export function Pokemon() {
+export function Pokemons() {
   const pokemons = useGetAllPokemons();
   console.log(pokemons);
 
   return (
     <div className="container_pokemons">
-      <div className="pokemons">
-        {pokemons.map((pokemon) => (
+      {pokemons.map((pokemon) => (
+        <div className="pokemons">
+          <Picture src={pokemon.sprites.front_default} alt="pokemon_front" size="size" />
           <div>
-            <Picture src={pokemon.sprites.front_default} alt="pokemon_front" size="size" />
-            <div> TESSST  </div>
+            {pokemon.name}
           </div>
-
-        ))}
-      </div>
+          <div>
+            {pokemon.id}
+            <span>
+              <VariantPokemon type={pokemon} />
+            </span>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
