@@ -1,11 +1,13 @@
+import { Variant } from '../../components/Variant/Variant'
+
 export function VariantPokemon({ type }) {
     return (
-        <div>
+        <>
             {type.abilities.map((variant) => (
-                <div>
+                <Variant type={variant.ability.name}>
                     {variant.ability.name}
-                </div>
+                </Variant>
             ))}
-        </div>
+        </>
     )
 }
