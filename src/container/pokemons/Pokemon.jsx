@@ -16,22 +16,18 @@ export function Pokemons() {
           <Picture
             src={pokemon.sprites.other.dream_world.front_default}
             alt="pokemon_front"
-            size="size"
           />
           <CardInfo>
             <div>
               N°
               {pokemon.id}
+
             </div>
             <span>
               {pokemon.name}
             </span>
-            <div className="variant">
-
-              <VariantPokemon variants={pokemon} />
-            </div>
-
           </CardInfo>
+          <VariantPokemon variants={pokemon} />
 
         </Card>
       ))}
