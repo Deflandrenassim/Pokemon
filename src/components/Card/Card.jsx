@@ -8,3 +8,10 @@ export function Card({ children }) {
     </div>
   );
 }
+export function CardInfo({ children }) {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+}
