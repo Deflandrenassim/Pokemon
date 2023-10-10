@@ -3,6 +3,7 @@ import './Pokemon.css';
 import { useGetAllPokemons } from '../../hooks/useGetAllPokemons';
 import { Picture } from '../../components/Picture/Picture';
 import { VariantPokemon } from './VariantPokemon';
+import { Card } from '../../components/Card/Card';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
@@ -11,18 +12,19 @@ export function Pokemons() {
   return (
     <div className="container_pokemons">
       {pokemons.map((pokemon) => (
-        <div className="pokemons">
+        <Card>
           <Picture src={pokemon.sprites.front_default} alt="pokemon_front" size="size" />
           <div>
-            {pokemon.name}
-          </div>
-          <div>
+            N°
             {pokemon.id}
             <span>
-              <VariantPokemon type={pokemon} />
+              <div>
+                {pokemon.name}
+              </div>
+              <VariantPokemon variants={pokemon} />
             </span>
           </div>
-        </div>
+        </Card>
       ))}
     </div>
   );

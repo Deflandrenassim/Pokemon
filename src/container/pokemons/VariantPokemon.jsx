@@ -1,11 +1,11 @@
 import { Variant } from '../../components/Variant/Variant'
 
-export function VariantPokemon({ type }) {
+export function VariantPokemon({ variants }) {
     return (
         <>
-            {type.abilities.map((variant) => (
-                <Variant type={variant.ability.name}>
-                    {variant.ability.name}
+            {variants.types.map((variant) => (
+                <Variant type={variant.type.name}>
+                    {variant.type.name}
                 </Variant>
             ))}
         </>
