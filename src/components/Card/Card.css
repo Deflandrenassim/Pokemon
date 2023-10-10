@@ -4,3 +4,8 @@
     border: solid 1px;
     margin: 20px;
 }
+
+.card_info {
+    display: flex;
+    justify-content: center;
+}

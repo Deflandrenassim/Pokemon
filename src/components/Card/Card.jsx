@@ -10,7 +10,7 @@ export function Card({ children }) {
 }
 export function CardInfo({ children }) {
   return (
-    <div>
+    <div className="card_info">
       {children}
     </div>
   )
