@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Input } from '../../components/Input/Input';
+import { Button } from '../../components/Button/Button';
 
 export function RegisterPlayers() {
     const [playerOne, setPlayerOne] = useState('');
@@ -7,7 +8,6 @@ export function RegisterPlayers() {
     const [displayName, setDisplayName] = useState(false);
 
     function handleValidRegister() {
-        console.log(displayName)
         setDisplayName(!displayName)
     }
 
@@ -29,7 +29,7 @@ export function RegisterPlayers() {
 
             <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
             <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
-            <button type="button" onClick={() => handleValidRegister()}> Valider </button>
+            <Button onClick={() => handleValidRegister()}> Valider </Button>
         </div>
     )
 }
