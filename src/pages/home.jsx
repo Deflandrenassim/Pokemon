@@ -1,4 +1,4 @@
-import './PokemonPage.css';
+import './home.css';
 import { Pokemons } from '../container/pokemons/Pokemon';
 
 function Home() {
