@@ -3,6 +3,7 @@
     flex-direction: column;
     border: solid 1px;
     margin: 20px;
+    padding: 10px;
 }
 
 .card_info {

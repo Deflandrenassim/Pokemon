@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Input } from '../../components/Input/Input';
 import { Button } from '../../components/Button/Button';
 import { RegleGame } from './RegleGame';
+import { NamePlayers } from './NamePlayers';
 
 export function RegisterPlayers() {
     const [playerOne, setPlayerOne] = useState('');
@@ -14,25 +15,12 @@ export function RegisterPlayers() {
     }
 
     return (
-        <div>
-            {displayName ? (
-                <div>
-                    <p>
-                        Joeur 1 :
-                        {playerOne}
-                    </p>
-                    <p>
-                        Joeur 2 :
-                        {playerTwo}
-                    </p>
-
-                </div>
-            ) : null}
-
+        <>
+            <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
             <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
             <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
             <Button onClick={() => handleValidRegister()}> Valider </Button>
             <RegleGame modalActive={modalActive} setModalActive={setModalActive} />
-        </div>
+        </>
     )
 }

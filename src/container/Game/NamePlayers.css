@@ -1,0 +1,9 @@
+ .container_players {
+     display: flex;
+     flex-direction: row;
+ }
+
+ .players {
+     padding-left: 10px;
+     padding-right: 10px;
+ }

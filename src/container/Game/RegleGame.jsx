@@ -7,6 +7,7 @@ export function RegleGame({ modalActive, setModalActive }) {
     function handleCloseModal() {
         setModalActive(false)
     }
+
     return (
         <div>
             <Modal active={modalActive} PokeUi="pokeUi">
