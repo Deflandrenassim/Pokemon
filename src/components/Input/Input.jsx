@@ -1,9 +1,9 @@
 import './Input.css';
 
-export function Input() {
+export function Input({ type, placeholder, onChange }) {
     return (
 
-        <input type="text" />
+        <input type={type} placeholder={placeholder} onChange={onChange} />
 
     )
 }

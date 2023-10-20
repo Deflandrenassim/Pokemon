@@ -1,14 +1,13 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import './Button.css';
 
-function Button({
-  children, functionToCall, appearance, value, active,
+export function Button({
+  children, onClick, className,
 }) {
   return (
-    <button className={`button ${appearance} ${active}`} onClick={functionToCall} type="button" value={value}>
+    <button className={className} onClick={onClick}>
       {children}
     </button>
   );
 }
-
-export default Button;

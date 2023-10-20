@@ -1,7 +1,7 @@
-import './PokemonPage.css';
+import './home.css';
 import { Pokemons } from '../container/pokemons/Pokemon';
 
-function PokemonPage() {
+function Home() {
 
   return (
     <div className="pokemon_page">
@@ -13,4 +13,4 @@ function PokemonPage() {
 
   )
 }
-export default PokemonPage;
+export default Home;

@@ -1,0 +1,11 @@
+.modal {
+    border: 1px solid rgb(62, 14, 14);
+}
+
+.modal.pokeUi {
+    position: absolute;
+    background-color: #f46f75;
+    color: white;
+    width: 30em;
+    border-radius: 20px;
+}
