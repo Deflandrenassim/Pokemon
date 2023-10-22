@@ -9,6 +9,17 @@ function Head() {
                 <div className="header_title">
                     <span> NassPoké</span>
                 </div>
+                <div className="container-links">
+                    <div>
+                        Accueil
+                    </div>
+                    <div>
+                        Pokemons
+                    </div>
+                    <div>
+                        Game
+                    </div>
+                </div>
 
                 <div className="header_logo">
                     <span className="header_poke">
