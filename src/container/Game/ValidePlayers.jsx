@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '../../components/Button/Button';
 import { NamePlayers } from './NamePlayers';
 import { Input } from '../../components/Input/Input';
+import './ValidePlayers.css';
 
 export function ValidePlayers() {
     const [playerOne, setPlayerOne] = useState('');
@@ -19,15 +20,16 @@ export function ValidePlayers() {
         <div>
             {showInput ? (
 
-                <div>
+                <div className="valide_players">
                     <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
                     <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
                     <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
                     <Button onClick={() => handleValidRegister()}> Valider </Button>
                 </div>
             ) : (
-
-                <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
+                <div className="valide_players_check">
+                    <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
+                </div>
             )}
         </div>
     )
