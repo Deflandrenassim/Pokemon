@@ -29,6 +29,7 @@
         "semi": "off",
         "padded-blocks": "off",
         "arrow-parens": "off",
-        "object-curly-newline": "off"
+        "object-curly-newline": "off",
+        "max-len": "off"
     }
 }
