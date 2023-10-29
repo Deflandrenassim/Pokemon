@@ -1,5 +1,5 @@
-import { TbPokeball } from 'react-icons/tb';
 import './Head.css';
+import { TbPokeball } from 'react-icons/tb';
 import Header from '../../components/header/Header';
 
 function Head() {
@@ -8,17 +8,6 @@ function Head() {
             <div className="header_align">
                 <div className="header_title">
                     <span> NassPoké</span>
-                </div>
-                <div className="container-links">
-                    <div>
-                        Accueil
-                    </div>
-                    <div>
-                        Pokemons
-                    </div>
-                    <div>
-                        Game
-                    </div>
                 </div>
 
                 <div className="header_logo">
