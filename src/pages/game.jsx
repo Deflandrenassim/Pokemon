@@ -1,10 +1,12 @@
 import './game.css';
 import { RegisterPlayers } from '../container/Game/RegisterPlayers';
+import { RandomPokemon } from '../container/Random/RandomPokemon';
 
 function Game() {
     return (
-        <div>
+        <div className="game-contain">
             <RegisterPlayers />
+            <RandomPokemon />
         </div>
     )
 }

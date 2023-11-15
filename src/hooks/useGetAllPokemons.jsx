@@ -12,7 +12,6 @@ export const useGetAllPokemons = () => {
     const getAllPokemonsInfo = async (results) => {
         Promise.all(results.map(({ name }) => callApi(name)))
             .then((values) => {
-                console.log(values);
                 setPokemons(values);
 
             });

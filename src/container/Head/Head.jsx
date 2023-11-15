@@ -1,5 +1,5 @@
-import { TbPokeball } from 'react-icons/tb';
 import './Head.css';
+import { TbPokeball } from 'react-icons/tb';
 import Header from '../../components/header/Header';
 
 function Head() {

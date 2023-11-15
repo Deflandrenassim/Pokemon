@@ -1,6 +1,6 @@
  .container_players {
      display: flex;
-     flex-direction: row;
+     justify-content: space-evenly;
  }
 
  .players {

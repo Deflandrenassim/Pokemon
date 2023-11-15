@@ -27,6 +27,10 @@
         "eol-last": "off",
         "import/prefer-default-export": "off",
         "semi": "off",
-        "padded-blocks": "off"
+        "padded-blocks": "off",
+        "arrow-parens": "off",
+        "object-curly-newline": "off",
+        "max-len": "off",
+        "linebreak-style": "off"
     }
 }
