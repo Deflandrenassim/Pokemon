@@ -1,0 +1,16 @@
+.randoms-pokemons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.random-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.random-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -4,7 +4,7 @@ import { RandomPokemon } from '../container/Random/RandomPokemon';
 
 function Game() {
     return (
-        <div>
+        <div className="game-contain">
             <RegisterPlayers />
             <RandomPokemon />
         </div>

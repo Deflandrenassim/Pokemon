@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useGetAllPokemons } from '../../hooks/useGetAllPokemons'
 import { Button } from '../../components/Button/Button';
 import { CardRandomPokemon } from './CardRandomPokemon';
+import './RandomPokemon.css';
 
 export function RandomPokemon({ display }) {
     const allPokemons = useGetAllPokemons();
@@ -23,7 +24,7 @@ export function RandomPokemon({ display }) {
 
     if (display === true) {
         return (
-            <div className="randoms-pokmons">
+            <div className="randoms-pokemons">
                 <div className="random-one">
                     <CardRandomPokemon random={randomOne} />
                     <Button onClick={() => handleRandomOne()}> random </Button>
