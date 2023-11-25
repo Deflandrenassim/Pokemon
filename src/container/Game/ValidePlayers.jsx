@@ -14,7 +14,6 @@ export function ValidePlayers() {
     function handleValidRegister() {
         setDisplayName(!displayName)
         setShowInput(!showInput);
-        console.log(showInput);
     }
 
     return (
