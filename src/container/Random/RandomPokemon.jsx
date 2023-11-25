@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useGetAllPokemons } from '../../hooks/useGetAllPokemons'
 import { Button } from '../../components/Button/Button';
 import { CardRandomPokemon } from './CardRandomPokemon';
-import { getBaseXp, verifyClick } from '../../utils/Calcul';
+import { getBaseXp } from '../../utils/Calcul';
 import './RandomPokemon.css';
 
 export function RandomPokemon({ display }) {

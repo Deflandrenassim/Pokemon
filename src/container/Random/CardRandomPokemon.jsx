@@ -5,7 +5,6 @@ export function CardRandomPokemon({ random }) {
     if (random === undefined) {
         return null;
     }
-
     return (
         <div>
             <Card>
