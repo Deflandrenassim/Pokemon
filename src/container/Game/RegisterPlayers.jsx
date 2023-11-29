@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { RegleGame } from './RegleGame';
 import { ValidePlayers } from './ValidePlayers';
 
-export function RegisterPlayers() {
+export function xRegisterPlayers() {
 
     const [modalActive, setModalActive] = useState(true);
     return (
