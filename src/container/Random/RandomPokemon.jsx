@@ -9,7 +9,6 @@ import './RandomPokemon.css';
 export function RandomPokemon({ display }) {
     const allPokemons = useGetAllPokemons();
     const [newAllPokemons, setNewAllPokemons] = useState(allPokemons);
-    console.log("new", newAllPokemons)
     const [randomOne, setRandomOne] = useState();
     const [randomTwo, setRandomTwo] = useState();
     const [btnClickOne, setBtnClickOne] = useState(false);
@@ -26,8 +25,6 @@ export function RandomPokemon({ display }) {
             setBtnClickTwo(false);
             getBaseXp(randomOne, randomTwo);
             pointUserWin(randomOne.base_experience, randomTwo.base_experience)
-            console.log("point 1 ", point.playerPointOne);
-            console.log("Point 2", point.playerPointTwo);
         }
     }, [btnClickOne, btnClickTwo])
 
@@ -41,8 +38,6 @@ export function RandomPokemon({ display }) {
     function handleRandomTwo() {
         const res = Math.floor(Math.random() * newAllPokemons.length - 1);
         setRandomTwo(newAllPokemons[res])
-        console.log(randomTwo)
-
         setBtnClickTwo(true);
 
     }
