@@ -8,12 +8,17 @@ import './RandomPokemon.css';
 
 export function RandomPokemon({ display }) {
     const allPokemons = useGetAllPokemons();
+    const [newAllPokemons, setNewAllPokemons] = useState(allPokemons);
+    console.log("new", newAllPokemons)
     const [randomOne, setRandomOne] = useState();
     const [randomTwo, setRandomTwo] = useState();
     const [btnClickOne, setBtnClickOne] = useState(false);
     const [btnClickTwo, setBtnClickTwo] = useState(false);
     const { pointUserWin, point } = useCountPoint();
 
+    useEffect(() => {
+        setNewAllPokemons(allPokemons);
+    }, [allPokemons]);
 
     useEffect(() => {
         if (btnClickOne && btnClickTwo) {
@@ -27,15 +32,15 @@ export function RandomPokemon({ display }) {
     }, [btnClickOne, btnClickTwo])
 
     function handleRandomOne() {
-        const res = Math.floor(Math.random() * allPokemons.length - 1);
-        setRandomOne(allPokemons[res]);
+        const res = Math.floor(Math.random() * newAllPokemons.length - 1);
+        setRandomOne(newAllPokemons[res]);
         setBtnClickOne(true);
 
     }
 
     function handleRandomTwo() {
-        const res = Math.floor(Math.random() * allPokemons.length - 1);
-        setRandomTwo(allPokemons[res])
+        const res = Math.floor(Math.random() * newAllPokemons.length - 1);
+        setRandomTwo(newAllPokemons[res])
         console.log(randomTwo)
 
         setBtnClickTwo(true);

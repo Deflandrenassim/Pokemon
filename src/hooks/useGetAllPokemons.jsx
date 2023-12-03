@@ -19,14 +19,18 @@ export const useGetAllPokemons = () => {
 
     useEffect(() => {
         const callAllPokemons = () => {
+            try {
+                axios.get('https://pokeapi.co/api/v2/pokemon?limit=100') // renvoi 100 pokemon avec ces caracteres
+                    .then((response) => {
+                        getAllPokemonsInfo(response.data.results);
+                    });
+            } catch (error) {
+                console.log(error)
+            }
 
-            axios.get('https://pokeapi.co/api/v2/pokemon?limit=100') // renvoi 100 pokemon avec ces caracteres
-                .then((response) => {
-                    getAllPokemonsInfo(response.data.results);
-                });
         }
         callAllPokemons()
     }, []);
-
+    console.log("useALl", pokemons)
     return pokemons
 }
