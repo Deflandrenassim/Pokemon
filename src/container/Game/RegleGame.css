@@ -3,3 +3,23 @@
     right: -28em;
     top: -4em;
 }
+
+.regle {
+    height: 10vh;
+    width: 10vh;
+    position: fixed;
+    bottom: 10px;
+    left: 8em;
+}
+
+.reglement {
+    padding-bottom: 20px;
+}
+
+.container-regle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}

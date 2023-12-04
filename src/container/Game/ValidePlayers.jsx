@@ -17,13 +17,14 @@ export function ValidePlayers() {
     }
 
     return (
-        <div>
+        <>
             {showInput ? (
-
                 <div className="valide_players">
                     <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
-                    <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
-                    <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
+                    <div className="input_name_players">
+                        <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
+                        <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
+                    </div>
                     <Button onClick={() => handleValidRegister()}> Valider </Button>
 
                 </div>
@@ -33,6 +34,6 @@ export function ValidePlayers() {
                     <RandomPokemon display={displayName} />
                 </div>
             )}
-        </div>
+        </>
     )
 }

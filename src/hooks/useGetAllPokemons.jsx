@@ -25,12 +25,11 @@ export const useGetAllPokemons = () => {
                         getAllPokemonsInfo(response.data.results);
                     });
             } catch (error) {
-                console.log(error)
+                return error
             }
 
         }
         callAllPokemons()
     }, []);
-    console.log("useALl", pokemons)
     return pokemons
 }
