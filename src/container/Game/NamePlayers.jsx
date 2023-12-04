@@ -4,7 +4,7 @@ import { useCountPoint } from '../../context/Point';
 export function NamePlayers({ displayName, playerOne, playerTwo }) {
     const { point } = useCountPoint();
     return (
-        <div>
+        <>
             {displayName ? (
                 <div className="container_players">
                     <span className="players">
@@ -17,6 +17,6 @@ export function NamePlayers({ displayName, playerOne, playerTwo }) {
                 </div>
             ) : null}
 
-        </div>
+        </>
     )
 }
