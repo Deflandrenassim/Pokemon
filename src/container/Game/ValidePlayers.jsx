@@ -3,7 +3,6 @@ import { Button } from '../../components/Button/Button';
 import { NamePlayers } from './NamePlayers';
 import { Input } from '../../components/Input/Input';
 import { RandomPokemon } from '../Random/RandomPokemon';
-// import { PlayerPoint } from './PlayerPoint';
 import './ValidePlayers.css';
 
 export function ValidePlayers() {
@@ -18,11 +17,9 @@ export function ValidePlayers() {
     }
 
     return (
-        <div>
+        <>
             {showInput ? (
-
                 <div className="valide_players">
-
                     <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
                     <Input type="text" placeholder="Joueur 1" onChange={(e) => setPlayerOne(e.target.value)} />
                     <Input type="text" placeholder="Joueur 2" onChange={(e) => setPlayerTwo(e.target.value)} />
@@ -31,11 +28,10 @@ export function ValidePlayers() {
                 </div>
             ) : (
                 <div className="valide_players_check">
-                    {/* <PlayerPoint display={showInput} /> */}
                     <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
                     <RandomPokemon display={displayName} />
                 </div>
             )}
-        </div>
+        </>
     )
 }
