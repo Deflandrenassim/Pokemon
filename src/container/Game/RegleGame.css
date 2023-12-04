@@ -7,9 +7,9 @@
 .regle {
     height: 10vh;
     width: 10vh;
-    position: relative;
+    position: fixed;
     bottom: 10px;
-    left: 80em;
+    left: 8em;
 }
 
 .reglement {
