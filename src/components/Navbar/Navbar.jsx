@@ -11,16 +11,29 @@ export function NavBar({ children }) {
     )
 }
 
-export function NavBarLinks() {
-    return (
-        <NavBar>
-            <Link to="/">
-                <SiPokemon size={40} />
-            </Link>
-            <Link to="/game">
-                <LuGamepad size={40} />
-            </Link>
-        </NavBar>
-    )
+export function NavBarLinks({ page }) {
+    if (page === "home")
+        return (
+            <NavBar>
+                <div className="container_navbar_links">
+                    <Link to="/">
+                        <SiPokemon size={40} />
+                    </Link>
+                    <Link to="/game">
+                        <LuGamepad size={40} />
+                    </Link>
+                </div>
+            </NavBar>
+        )
+    if (page === "game")
+        return (
+            <NavBar>
+                <div className="container_navbar_links">
+                    <Link to="/">
+                        <SiPokemon size={40} />
+                    </Link>
+                </div>
+            </NavBar>
+        )
 }
 
