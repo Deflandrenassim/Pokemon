@@ -7,7 +7,6 @@ import { Card, CardInfo } from '../../components/Card/Card';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
-  console.log(pokemons);
 
   return (
     <div className="container_pokemons">
