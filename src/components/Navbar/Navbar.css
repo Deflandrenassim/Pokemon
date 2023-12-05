@@ -1,0 +1,9 @@
+.Navbar {
+    position: fixed;
+    right: 15px;
+    height: 8em;
+    top: 40%;
+    width: 5em;
+    border-radius: 30px;
+    background-color: rgb(235, 216, 216);
+}

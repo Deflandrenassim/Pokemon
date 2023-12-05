@@ -1,7 +1,7 @@
 import './home.css';
 import { Pokemons } from '../container/pokemons/Pokemon';
 import { TbArrowBigUpLine } from "react-icons/tb";
-import { Button } from '../components/Button/Button';
+import { NavBarLinks } from '../components/Navbar/Navbar'
 
 function Home() {
 
@@ -13,15 +13,14 @@ function Home() {
     });
   };
 
-
-
   return (
     <div className="pokemon_page">
+      <NavBarLinks />
       <div className="pokemon_page_background">
         <Pokemons />
       </div>
-      <div className="home-btn-top">
-        <Button onClick={goToTop}> <TbArrowBigUpLine /> </Button>
+      <div className="home-btn-top" onClick={goToTop} >
+        <TbArrowBigUpLine size={30} />
       </div>
     </div>
 
