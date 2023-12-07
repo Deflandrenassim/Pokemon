@@ -23,8 +23,6 @@ export function useCountPoint() {
     const { point, setPoint } = useContext(PointContext);
 
     function pointUserWin(randomeOne, randomeTwo) {
-        console.log("point user1", randomeOne);
-        console.log("point user2", randomeTwo)
 
         if (randomeOne > randomeTwo) {
             setPoint(prev => ({
