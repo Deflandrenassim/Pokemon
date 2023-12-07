@@ -2,10 +2,12 @@ import './home.css';
 import { Pokemons } from '../container/pokemons/Pokemon';
 import { TbArrowBigUpLine } from "react-icons/tb";
 import { NavBarLinks } from '../components/Navbar/Navbar'
-
+import { useGetAllPokemons } from '../hooks/useGetAllPokemons';
+import { ButtonsTypes } from '../container/FilterBtn/ButtonsTypes';
 
 function Home() {
-
+  const lists = useGetAllPokemons();
+  console.log(lists);
   function goToTop() {
     console.log("onclick")
     window.scrollTo({
@@ -17,6 +19,9 @@ function Home() {
   return (
     <div className="pokemon_page">
       <div className="pokemon_page_background">
+        <div className="pokemon-type-btn-container">
+          <ButtonsTypes />
+        </div>
         <Pokemons />
       </div>
       <div className="home-btn-top" onClick={goToTop} >

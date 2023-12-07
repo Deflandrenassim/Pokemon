@@ -1,5 +1,5 @@
 import './Variant.css';
-
+import { Button } from '../Button/Button';
 export function Variant({ children, type }) {
     return (
         <div className={`variant ${type}`}>
@@ -7,10 +7,10 @@ export function Variant({ children, type }) {
         </div>
     )
 }
-export function VariantBtn({ children, type }) {
+export function VariantBtn({ children, type, appareance }) {
     return (
-        <button className={`variant ${type}`}>
+        <Button className={`variant ${type} ${appareance}`}>
             {children}
-        </button>
+        </Button>
     )
 }
