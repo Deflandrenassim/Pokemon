@@ -7,9 +7,9 @@ export function Variant({ children, type }) {
         </div>
     )
 }
-export function VariantBtn({ children, type, appareance }) {
+export function VariantBtn({ children, type, appareance, onClick }) {
     return (
-        <Button className={`variant ${type} ${appareance}`}>
+        <Button onClick={onClick} className={`variant ${type} ${appareance}`}>
             {children}
         </Button>
     )

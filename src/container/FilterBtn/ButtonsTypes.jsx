@@ -1,14 +1,24 @@
-import { Button } from '../../components/Button/Button';
-import { TypePokemon } from '../../data/typePokemon'
+import { useState } from 'react';
 import { VariantBtn } from '../../components/Variant/Variant';
+import { TypePokemon } from '../../data/typePokemon';
 
-export function ButtonsTypes() {
+export function ButtonsTypes({ type }) {
+    const [selectType] = useState(TypePokemon);
+    const [handleClick, setHandleClick] = useState();
 
+    function handleClickbtn(valueType) {
+        setHandleClick(valueType);
+        if (type === valueType) {
+            console.log("types", type)
+        }
+    }
 
     return (
         <>
-            {TypePokemon.map((type) => (
-                <VariantBtn type={type.name}> {type.name}</VariantBtn>
+            {selectType.map((type) => (
+                <VariantBtn type={type.name} onClick={() => handleClickbtn(type.name)} key={type.name}>
+                    {type.name}
+                </VariantBtn>
             ))}
         </>
     )

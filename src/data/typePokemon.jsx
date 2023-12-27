@@ -73,10 +73,6 @@ export const TypePokemon = [
         url: "https://pokeapi.co/api/v2/type/18/"
     },
     {
-        name: "unknown",
-        url: "https://pokeapi.co/api/v2/type/10001/"
-    },
-    {
         name: "shadow",
         url: "https://pokeapi.co/api/v2/type/10002/"
     }

@@ -10,8 +10,3 @@
     width: 100%;
     background: url(../../public/background_pokemons.png);
 }
-
-.pokemon-type-btn-container {
-    display: flex;
-    flex-direction: row;
-}
