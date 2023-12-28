@@ -1,19 +1,9 @@
-import { useParams } from "react-router-dom";
-import { useGetAllPokemons } from "../hooks/useGetAllPokemons";
-function PokemonById() {
-    const { id } = useParams();
-    const pokemons = useGetAllPokemons();
+import { PokemonStatById } from "../container/PokemonId/PokemonStatById";
 
-    const parseId = parseInt(id, 10);
-    const filterpokemonbyId = pokemons.filter(e => e.id === parseId);
+function PokemonById() {
 
     return (
-        <div>
-
-            {filterpokemonbyId.map((stat) => (
-                <div key={stat.id}> {stat.name}</div>
-            ))}
-        </div>
+        <PokemonStatById />
     )
 }
 export default PokemonById;
