@@ -1,31 +1,29 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
+import { Bar } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-export function Stat() {
+export function Stat({ stats }) {
+    console.log(stats);
+    const datas = stats.stats.map((s) => s.base_stat);
+    const labels = stats.stats.map((s) => s.stat.name);
+    console.log("lables", labels);
+
     const data = {
-        labels: ["force", "attack", "defense"],
+        labels: labels,
         datasets: [
             {
-                label: '369',
-                data: [3, 6, 9],
+                label: "stat",
+                data: datas,
                 backgroundColor: 'aqua',
                 borderColor: 'black',
                 borderWidth: 1,
             },
-            {
-                label: '39',
-                data: [1, 3, 7],
-                backgroundColor: 'red',
-                borderColor: 'black',
-                borderWidth: 1,
-            }
         ]
     }
     return (
         <>
-            <Doughnut data={data} />
+            <Bar data={data} />
         </>
 
     )
