@@ -1,0 +1,11 @@
+.pokemon_stat {
+    height: 50vh;
+    width: 50vh;
+}
+
+.pokemon_stat_name {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 3em;
+}
