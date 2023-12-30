@@ -2,3 +2,8 @@ img {
     height: 100px;
     width: 200px;
 }
+
+.picture.xl {
+    height: 50vh;
+    width: 50vh;
+}

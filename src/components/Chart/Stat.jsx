@@ -4,18 +4,25 @@ import { Bar } from "react-chartjs-2";
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 export function Stat({ stats }) {
-    console.log(stats);
+    const name = stats.name;
     const datas = stats.stats.map((s) => s.base_stat);
     const labels = stats.stats.map((s) => s.stat.name);
-    console.log("lables", labels);
 
     const data = {
         labels: labels,
         datasets: [
             {
-                label: "stat",
+                label: name,
                 data: datas,
-                backgroundColor: 'aqua',
+                backgroundColor:
+                    [
+                        "rgba(247,167,102)",
+                        "rgba(247,133,88)",
+                        "rgba(219,89,44)",
+                        "rgba(188,43,83)",
+                        "rgba(178,41,86)",
+                        "rgba(195,19,19)"
+                    ],
                 borderColor: 'black',
                 borderWidth: 1,
             },

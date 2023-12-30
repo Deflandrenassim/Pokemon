@@ -5,7 +5,7 @@ export function VariantPokemon({ variants }) {
         <>
             {variants.types.map((variant) => (
                 <>
-                    <Variant >
+                    <Variant>
                         <div className="types">
                             {variant.type.name}
                         </div>
