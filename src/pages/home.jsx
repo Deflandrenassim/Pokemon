@@ -2,10 +2,11 @@ import './home.css';
 import { Pokemons } from '../container/pokemons/Pokemon';
 import { TbArrowBigUpLine } from "react-icons/tb";
 import { NavBarLinks } from '../components/Navbar/Navbar'
-
+import { useGetAllPokemons } from '../hooks/useGetAllPokemons';
+import { ButtonsTypes } from '../container/FilterBtn/ButtonsTypes';
 
 function Home() {
-
+  const lists = useGetAllPokemons();
   function goToTop() {
     console.log("onclick")
     window.scrollTo({

@@ -10,7 +10,7 @@ export const useGetAllPokemons = () => {
     };
 
     const getAllPokemonsInfo = async (results) => {
-        Promise.all(results.map(({ name }) => callApi(name)))
+        await Promise.all(results.map(({ name }) => callApi(name)))
             .then((values) => {
                 setPokemons(values);
 
@@ -18,9 +18,9 @@ export const useGetAllPokemons = () => {
     };
 
     useEffect(() => {
-        const callAllPokemons = () => {
+        const callAllPokemons = async () => {
             try {
-                axios.get('https://pokeapi.co/api/v2/pokemon?limit=100') // renvoi 100 pokemon avec ces caracteres
+                await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100') // renvoi 100 pokemon avec ces caracteres
                     .then((response) => {
                         getAllPokemonsInfo(response.data.results);
                     });
