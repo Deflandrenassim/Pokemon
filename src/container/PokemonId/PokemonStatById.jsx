@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import './PokemonStatById.css';
-import { Card } from "../../components/Card/Card";
+import { Card, CardFlex } from "../../components/Card/Card";
 import { useGetAllPokemons } from "../../hooks/useGetAllPokemons";
 import { Stat } from "../../components/Chart/Stat";
 import { Picture } from '../../components/Picture/Picture';
@@ -16,7 +16,7 @@ export function PokemonStatById() {
     const descriptionbyId = useGetDescriptionPokemon(id);
     const copyDescriptionBydId = descriptionbyId;
     console.log("copy", copyDescriptionBydId)
-    const getDescription = GetDescription(copyDescriptionBydId, "fr");
+    const getDescriptionPokemon = GetDescription(copyDescriptionBydId, "fr");
 
     return (
         <>
@@ -24,14 +24,19 @@ export function PokemonStatById() {
                 <div key={stat.id}>
                     <div className="pokemon_stat_name"> {stat.name}</div>
                     <Card>
-                        <div key={stat.id}>
-                            <Picture src={stat.sprites.other.dream_world.front_default} size="xl" />
-                            <VariantPokemon variants={stat}></VariantPokemon>
-                            <div> {getDescription} </div>
-                        </div>
-                        <div className="pokemon_stat">
-                            <Stat stats={stat} />
-                        </div>
+                        <CardFlex variant="flexRow">
+                            <Card>
+                                <Picture src={stat.sprites.other.dream_world.front_default} size="xl" />
+                            </Card>
+                            <Card variant="cardInformation">
+                                <VariantPokemon variants={stat} />
+                                <span> {getDescriptionPokemon} </span>
+                                <div className="pokemon_stat">
+                                    <Stat stats={stat} />
+                                </div>
+                            </Card>
+                        </CardFlex>
+
                     </Card>
                 </div>
             ))}

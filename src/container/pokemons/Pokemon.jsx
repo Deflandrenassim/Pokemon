@@ -33,7 +33,10 @@ export function Pokemons() {
     <div className="container_pokemons">
       {allPokemons.map((pokemon) => (
         <>
-          <Card onClick={() => handleClick(pokemon)}>
+          <Card
+            onClick={() => handleClick(pokemon)}
+            variant="allPok"
+          >
             <Picture
               src={pokemon.sprites.other.dream_world.front_default}
               alt="pokemon_front"
