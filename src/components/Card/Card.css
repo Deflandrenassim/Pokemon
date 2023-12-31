@@ -1,12 +1,24 @@
 .card {
+    padding: 20px;
+}
+
+.card.allPok {
     display: flex;
     flex-direction: column;
     border: solid 1px;
     margin: 20px;
-    padding: 10px;
+}
+
+.card.cardInformation {
+    border-radius: 10px;
 }
 
 .card_info {
     display: flex;
     justify-content: center;
+}
+
+.card_flex.flexRow {
+    display: flex;
+    flex-direction: row;
 }

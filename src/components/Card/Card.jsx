@@ -8,7 +8,13 @@ export function Card({ children, onClick, variant }) {
     </div >
   );
 }
-
+export function CardFlex({ children, variant }) {
+  return (
+    <div className={`card_flex ${variant}`}>
+      {children}
+    </div>
+  )
+}
 export function CardInfo({ children }) {
   return (
     <div className="card_info">
