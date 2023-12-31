@@ -15,7 +15,8 @@ export function PokemonStatById() {
     const filterpokemonbyId = pokemons.filter(e => e.id === parseId);
     const descriptionbyId = useGetDescriptionPokemon(id);
     const copyDescriptionBydId = descriptionbyId;
-    console.log("copy", copyDescriptionBydId)
+    console.log("copy", copyDescriptionBydId);
+    console.log(pokemons)
     const getDescriptionPokemon = GetDescription(copyDescriptionBydId, "fr");
 
     return (
@@ -23,14 +24,16 @@ export function PokemonStatById() {
             {filterpokemonbyId.map((stat) => (
                 <div key={stat.id}>
                     <div className="pokemon_stat_name"> {stat.name}</div>
-                    <Card>
+                    <Card variant="allPok">
                         <CardFlex variant="flexRow">
-                            <Card>
+                            <Card variant="allPok">
                                 <Picture src={stat.sprites.other.dream_world.front_default} size="xl" />
                             </Card>
-                            <Card variant="cardInformation">
-                                <VariantPokemon variants={stat} />
-                                <span> {getDescriptionPokemon} </span>
+                            <Card variant="allPok">
+                                <div className="type_by_id">
+                                    TYPE : <VariantPokemon variants={stat} />
+                                </div>
+                                <span> DESCRIPTION : {getDescriptionPokemon} </span>
                                 <div className="pokemon_stat">
                                     <Stat stats={stat} />
                                 </div>

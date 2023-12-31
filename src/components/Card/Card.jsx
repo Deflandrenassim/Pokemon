@@ -3,7 +3,7 @@ import './Card.css';
 
 export function Card({ children, onClick, variant }) {
   return (
-    <div className={`card ${variant}`} onClick={onClick} >
+    <div className={`card ${variant}`} onClick={onClick}>
       {children}
     </div >
   );

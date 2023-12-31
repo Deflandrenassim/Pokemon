@@ -1,6 +1,9 @@
 .pokemon_stat {
-    height: 50vh;
-    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 50vh;
+    width: 50vh; */
 }
 
 .pokemon_stat_name {
@@ -8,4 +11,9 @@
     justify-content: center;
     padding-top: 30px;
     font-size: 3em;
+}
+
+.type_by_id {
+    display: flex;
+    align-items: center;
 }
