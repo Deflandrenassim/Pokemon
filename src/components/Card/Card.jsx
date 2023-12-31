@@ -1,13 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-export function Card({ children, onClick }) {
+export function Card({ children, onClick, variant }) {
   return (
-    <div onClick={onClick} className="card">
+    <div className={`card ${variant}`} onClick={onClick} >
       {children}
-    </div>
+    </div >
   );
 }
+
 export function CardInfo({ children }) {
   return (
     <div className="card_info">
