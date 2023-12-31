@@ -7,6 +7,7 @@ import { Picture } from '../../components/Picture/Picture';
 import { VariantPokemon } from "../pokemons/VariantPokemon";
 import { useGetDescriptionPokemon } from "../../hooks/useGetDescriptionPokemon";
 import { GetDescription } from "../../utils/GetDescription";
+import { Evolution } from "../Evolution/Evolution";
 
 export function PokemonStatById() {
     const { id } = useParams();
@@ -18,6 +19,7 @@ export function PokemonStatById() {
     console.log("copy", copyDescriptionBydId);
     console.log(pokemons)
     const getDescriptionPokemon = GetDescription(copyDescriptionBydId, "fr");
+
 
     return (
         <>
@@ -39,10 +41,10 @@ export function PokemonStatById() {
                                 </div>
                             </Card>
                         </CardFlex>
-
                     </Card>
                 </div>
             ))}
+            <Evolution />
         </>
     )
 }
