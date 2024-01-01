@@ -1,9 +1,13 @@
 .pokemon_stat {
     display: flex;
-    justify-content: center;
+    padding-top: 20px;
+}
+
+.pokemon_container {
+    padding-top: 5em;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    /* height: 50vh;
-    width: 50vh; */
 }
 
 .pokemon_stat_name {
@@ -16,4 +20,14 @@
 .type_by_id {
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 380px) and (max-width: 900px) {
+
+    .pokemon_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

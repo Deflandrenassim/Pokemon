@@ -13,7 +13,6 @@ export const useGetAllPokemons = () => {
         await Promise.all(results.map(({ name }) => callApi(name)))
             .then((values) => {
                 setPokemons(values);
-
             });
     };
 
@@ -27,9 +26,9 @@ export const useGetAllPokemons = () => {
             } catch (error) {
                 return error
             }
-
         }
         callAllPokemons()
     }, []);
+
     return pokemons
 }
