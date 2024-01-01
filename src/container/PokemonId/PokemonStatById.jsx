@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import './PokemonStatById.css';
-import { Card, CardFlex } from "../../components/Card/Card";
+import { Card } from "../../components/Card/Card";
 import { useGetAllPokemons } from "../../hooks/useGetAllPokemons";
 import { Stat } from "../../components/Chart/Stat";
 import { Picture } from '../../components/Picture/Picture';
@@ -34,7 +34,6 @@ export function PokemonStatById() {
                             </div>
                         </Card>
                     </div>
-
                 </div>
             ))}
         </>

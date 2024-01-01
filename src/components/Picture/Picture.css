@@ -7,3 +7,11 @@ img {
     height: 50vh;
     width: 50vh;
 }
+
+@media (min-width: 380px) and (max-width: 900px) {
+
+    .picture.xl {
+        height: 20vh;
+        width: 30vh;
+    }
+}

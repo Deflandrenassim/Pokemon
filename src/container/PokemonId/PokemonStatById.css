@@ -1,5 +1,6 @@
 .pokemon_stat {
     display: flex;
+    padding-top: 20px;
 }
 
 .pokemon_container {
@@ -19,4 +20,14 @@
 .type_by_id {
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 380px) and (max-width: 900px) {
+
+    .pokemon_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
