@@ -3,7 +3,9 @@ import { PokemonStatById } from "../container/PokemonId/PokemonStatById";
 function PokemonById() {
 
     return (
-        <PokemonStatById />
+        <div>
+            <PokemonStatById />
+        </div>
     )
 }
 export default PokemonById;

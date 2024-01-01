@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css';
 
-export function Card({ children, onClick, variant }) {
+export function Card({ children, onClick, variant, size }) {
   return (
-    <div className={`card ${variant}`} onClick={onClick}>
+    <div className={`card ${variant} ${size}`} onClick={onClick}>
       {children}
     </div >
   );

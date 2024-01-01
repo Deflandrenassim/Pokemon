@@ -1,9 +1,12 @@
 .pokemon_stat {
     display: flex;
-    justify-content: center;
+}
+
+.pokemon_container {
+    padding-top: 5em;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    /* height: 50vh;
-    width: 50vh; */
 }
 
 .pokemon_stat_name {

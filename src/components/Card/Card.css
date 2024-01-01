@@ -3,10 +3,8 @@
 }
 
 .card.allPok {
-    display: flex;
-    flex-direction: column;
     border: solid 1px;
-    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .card.cardInformation {
@@ -17,6 +15,7 @@
     display: flex;
     justify-content: center;
 }
+
 
 .card_flex.flexRow {
     display: flex;
