@@ -29,6 +29,7 @@ export function Pokemons() {
       {allPokemons.map((pokemon) => (
         <>
           <Card
+            margin="margin"
             onClick={() => handleClick(pokemon)}
             variant="allPok"
           >
