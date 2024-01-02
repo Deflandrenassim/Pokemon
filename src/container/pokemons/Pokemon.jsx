@@ -7,13 +7,13 @@ import { useNavigate } from 'react-router-dom';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
-  const allPokemons = pokemons;
+  const copyPokemons = pokemons;
   const navigate = useNavigate();
 
   function CompareType() {
-    for (let i = 0; i < allPokemons.length; i++) {
-      if (allPokemons[i].types) {
-        for (let j = 0; j < allPokemons[i].types.length; j++) {
+    for (let i = 0; i < copyPokemons.length; i++) {
+      if (copyPokemons[i].types) {
+        for (let j = 0; j < copyPokemons[i].types.length; j++) {
         }
       }
     }
@@ -26,7 +26,7 @@ export function Pokemons() {
 
   return (
     <div className="container_pokemons">
-      {allPokemons.map((pokemon) => (
+      {copyPokemons.map((pokemon) => (
         <>
           <Card
             margin="margin"
