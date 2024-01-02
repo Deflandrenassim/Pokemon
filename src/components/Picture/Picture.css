@@ -8,9 +8,10 @@ img {
     width: 50vh;
 }
 
-@media (min-width: 380px) and (max-width: 900px) {
+@media (min-width: 340px) and (max-width: 900px) {
 
     .picture.xl {
+        padding-bottom: 25px;
         height: 20vh;
         width: 30vh;
     }

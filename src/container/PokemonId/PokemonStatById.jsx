@@ -34,8 +34,9 @@ export function PokemonStatById() {
                             </div>
                         </Card>
                     </div>
-                </div>
-            ))}
+                </div >
+            ))
+            }
         </>
     )
 }

@@ -22,12 +22,25 @@
     align-items: center;
 }
 
-@media (min-width: 380px) and (max-width: 900px) {
+@media (min-width: 340px) and (max-width: 900px) {
 
     .pokemon_container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 5em;
+        padding-top: 5em;
+    }
+
+    .type_by_id {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .pokemon_stat {
+        display: flex;
+        padding-top: 20px;
+
     }
 }
