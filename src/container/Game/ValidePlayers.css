@@ -1,16 +1,28 @@
-.valide_players {
-    display: flex;
-    justify-content: center;
+.valide_players_check {
+    border: solid 1px;
+    width: 10em;
 }
 
-.valide_players_check {
-    padding: 20px;
-    text-transform: uppercase;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.container_valid {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: x-large;
+    align-items: center;
+}
+
+.valide_players {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .input_name_players {
-    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

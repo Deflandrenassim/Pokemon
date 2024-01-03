@@ -7,10 +7,8 @@ import { NavBarLinks } from '../components/Navbar/Navbar';
 function Game() {
     return (
         <PointProvider>
-            <div className="game-contain">
-                <RegisterPlayers />
-                <RandomPokemon />
-            </div>
+            <RegisterPlayers />
+            <RandomPokemon />
             <NavBarLinks page="game" />
         </PointProvider>
     )
