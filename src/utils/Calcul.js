@@ -1,6 +1,7 @@
-export function getBaseXp(pokeOne, pokeTwo) {
-    const pokeOneBase = pokeOne.base_experience;
-    const pokeTwoBase = pokeTwo.base_experience;
+export async function getBaseXp(pokeOne, pokeTwo) {
+    console.log("get", pokeOne, pokeTwo)
+    const pokeOneBase = await pokeOne.base_experience;
+    const pokeTwoBase = await pokeTwo.base_experience;
 
     if (pokeOneBase > pokeTwoBase) {
         return pokeOneBase

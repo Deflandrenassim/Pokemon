@@ -2,9 +2,11 @@ import { Card, CardInfo } from '../../components/Card/Card';
 import { Picture } from '../../components/Picture/Picture';
 
 export function CardRandomPokemon({ random }) {
+    console.log(random);
     if (random === undefined) {
         return null;
     }
+
     return (
         <div>
             <Card>

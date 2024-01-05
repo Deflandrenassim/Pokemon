@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '../../components/Button/Button';
 import { NamePlayers } from './NamePlayers';
 import { Input } from '../../components/Input/Input';
@@ -9,31 +9,12 @@ export function ValidePlayers() {
     const [playerOne, setPlayerOne] = useState('');
     const [playerTwo, setPlayerTwo] = useState('');
     const [displayName, setDisplayName] = useState(false);
-    console.log("name ", displayName);
     const [showInput, setShowInput] = useState(true);
     const [name, setName] = useState("");
 
-
-    // if (playerOne && playerTwo === "") {
-    //     setName("Veuillez saisir vos noms")
-    //     setDisplayName(false);
-
-    // }
-    // else if (playerOne === "") {
-    //     setName("Il manque la saisie du joueur 1")
-    //     setDisplayName(false);
-
-    // } else {
-    //     setName("Il manque la saisie du joueur 2")
-    //     setDisplayName(false);
-    // }
-
-
-
-
     function handleValidRegister() {
         if (playerOne && playerTwo === "") {
-            setName("Veuillez saisir vos noms")
+            setName("Veuillez saisir les noms des joueurs")
 
         }
         else if (playerOne === "" || playerOne === "") {
