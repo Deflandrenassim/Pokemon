@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Pokemon.css';
 import { useGetAllPokemons } from '../../hooks/useGetAllPokemons';
 import { Picture } from '../../components/Picture/Picture';
@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
+  console.log(pokemons);
   const copyPokemons = pokemons;
   const navigate = useNavigate();
 
@@ -18,6 +19,7 @@ export function Pokemons() {
       }
     }
   }
+
   CompareType();
 
   function handleClick({ id }) {

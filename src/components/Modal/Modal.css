@@ -1,14 +1,16 @@
 .modal {
-    border: 1px solid rgb(62, 14, 14);
-}
-
-.modal.pokeUi {
     position: absolute;
     top: 50%;
     left: 50%;
+    border: 1px solid rgb(62, 14, 14);
     transform: translate(-50%, -50%);
     background-color: #f46f75;
     color: white;
-    width: 30em;
-    border-radius: 20px;
+}
+
+@media (min-width: 340px) and (max-width: 900px) {
+    .modal {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

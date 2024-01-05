@@ -17,9 +17,9 @@
     align-items: center;
 }
 
-@media (min-width: 340px) and (max-width: 900px) {
+@media (min-width: 340px) and (max-width: 950px) {
     .navbar {
+        margin-right: 0.5em;
         width: 3em;
-        padding: 10px 10px;
     }
 }

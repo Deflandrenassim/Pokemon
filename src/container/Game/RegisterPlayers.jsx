@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { RegleGame } from './RegleGame';
 import { ValidePlayers } from './ValidePlayers';
+import './RegisterPlayers.css';
 
 export function RegisterPlayers() {
 

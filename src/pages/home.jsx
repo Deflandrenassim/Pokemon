@@ -5,8 +5,8 @@ import { NavBarLinks } from '../components/Navbar/Navbar'
 
 
 function Home() {
+
   function goToTop() {
-    console.log("onclick")
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

@@ -11,7 +11,7 @@ export function RegleGame({ modalActive, setModalActive }) {
     if (modalActive === true)
         return (
             <>
-                <Modal active={modalActive} PokeUi="pokeUi">
+                <Modal active={modalActive} >
                     <div className='container-regle'>
                         <h1> Welcome Game PokeNass</h1>
                         <div className="position-btn">

@@ -17,6 +17,6 @@ export function useGetDescriptionPokemon(id) {
             }
         }
         callApiDescription();
-    }, [])
+    }, [id])
     return description;
 }
