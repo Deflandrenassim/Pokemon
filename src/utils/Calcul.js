@@ -1,5 +1,5 @@
 export async function getBaseXp(pokeOne, pokeTwo) {
-    console.log("get", pokeOne, pokeTwo)
+
     const pokeOneBase = await pokeOne.base_experience;
     const pokeTwoBase = await pokeTwo.base_experience;
 

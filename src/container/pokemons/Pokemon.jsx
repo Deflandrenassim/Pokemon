@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
-  console.log(pokemons);
   const copyPokemons = pokemons;
   const navigate = useNavigate();
 

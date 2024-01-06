@@ -9,7 +9,7 @@ export function GetDescription(arr, language) {
             }
         }
     } else {
-        console.log("La propriété flavor_text_entries n'est pas définie dans l'objet.");
+        return "La propriété flavor_text_entries n'est pas définie dans l'objet.";
     }
     return result;
 }

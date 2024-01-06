@@ -13,7 +13,7 @@ export function useGetDescriptionPokemon(id) {
                     })
             }
             catch (error) {
-                console.log("err description ", error);
+                return error;
             }
         }
         callApiDescription();

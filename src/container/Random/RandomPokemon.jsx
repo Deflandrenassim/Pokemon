@@ -20,7 +20,6 @@ export function RandomPokemon({ display }) {
             setBtnClickOne(false);
             setBtnClickTwo(false);
             getBaseXp(randomOne, randomTwo);
-            console.log("random click ", randomOne, randomTwo)
             pointUserWin(randomOne.base_experience, randomTwo.base_experience)
         }
     }, [btnClickOne, btnClickTwo])
