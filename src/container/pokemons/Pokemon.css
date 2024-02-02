@@ -1,3 +1,8 @@
+.container-search-pokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container_pokemons {
     display: flex;
     justify-content: center;
