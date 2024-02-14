@@ -1,9 +1,7 @@
 # Project Pokemon : 
 
-# REACT JS & POkeAPi 
-
-# REACT ICONS 
+REACT JS & POkeAPi 
+REACT ICONS 
 
 # Vercel : 
-
-# pokemon-nassjs.vercel.app
+pokemon-nassjs.vercel.app
