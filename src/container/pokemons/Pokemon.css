@@ -3,21 +3,26 @@
     justify-content: center;
     align-items: center;
 }
+
 .container_pokemons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 3em;
+}
 
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end
 }
 
 .pokemons {
     display: flex;
-
     width: 25rem;
     justify-content: space-evenly;
     background-color: whitesmoke;
-
 }
 
 .pokemon-type-btn-container {
