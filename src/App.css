@@ -1,7 +1,9 @@
-.App {}
+
 
 .input {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+    
+  caret-color: rgb(247 216 197);
+}
+input:hover{
+   caret-color:  rgb(247 216 197);
 }
