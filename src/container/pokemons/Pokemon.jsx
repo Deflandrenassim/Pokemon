@@ -28,7 +28,9 @@ export function Pokemons() {
   }
 
   async function  HandleSearchPokemon  () {
-   const pokemons =  await copyPokemons.filter((e) => e.name === inputValue)
+   const pokemons =  await copyPokemons.filter((e) => e.name === inputValue);
+  //  const pokemonLow = pokemons.toLowerCase();
+   console.log("test", pokemons);
     useCopyPokemons(pokemons);
    }
 
@@ -42,7 +44,9 @@ export function Pokemons() {
   return (
 <>
       <div className="search-container">
-        <Input type="search" placeholder="search pokemon..."onChange={(e) => setInputValue(e.target.value)}/>
+        <Input type="search" placeholder="search pokemon..."
+          onChange={(e) => setInputValue(e.target.value.toLowerCase())}
+        />
         <Button onClick={HandleSearchPokemon} size="S"> Valider </Button>
         <Button onClick={HandleSearchResetPokemons} size="S"> X </Button>  
       </div>
@@ -73,5 +77,7 @@ export function Pokemons() {
     </div>
     </> 
   );
+  
+  if(!copyPokemons)
    return <div>Loading.....</div>
 }
