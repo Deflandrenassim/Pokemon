@@ -8,6 +8,17 @@ img {
     width: 50vh;
 }
 
+.picture.spinner{
+    height: 3em;
+    width: 4em;
+    animation: rotateSpinner 800ms linear infinite;
+}
+@keyframes rotateSpinner {
+    to {
+    transform: rotate(300deg);
+    }
+}
+
 @media (min-width: 340px) and (max-width: 900px) {
 
     .picture.xl {

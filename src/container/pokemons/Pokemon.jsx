@@ -6,6 +6,7 @@ import { Card, CardInfo } from '../../components/Card/Card';
 import {  useNavigate } from 'react-router-dom';
 import {Input} from '../../components/Input/Input'
 import {Button} from '../../components/Button/Button';
+import { NotFound } from '../../components/NotFound/NotFound';
 
 export function Pokemons() {
   const pokemons = useGetAllPokemons();
@@ -14,8 +15,8 @@ export function Pokemons() {
   const [boolBtnReset, setBoolBtnReset] = useState(false);
 
   useEffect(() => {
-   async  function Get () {
-          useCopyPokemons(pokemons)
+     function Get () {
+      useCopyPokemons(pokemons)
     }
 
     Get();
@@ -29,12 +30,14 @@ export function Pokemons() {
 
   async function  HandleSearchPokemon  () {
    const pokemons =  await copyPokemons.filter((e) => e.name === inputValue);
-  //  const pokemonLow = pokemons.toLowerCase();
+  // const pokemonLow = pokemons.toLowerCase();
    console.log("test", pokemons);
     useCopyPokemons(pokemons);
+    console.log("copy non found ", copyPokemons)
    }
 
    function HandleSearchResetPokemons () {
+    setInputValue('')
     useCopyPokemons(pokemons)
     setBoolBtnReset(!boolBtnReset);
    } 
@@ -42,7 +45,7 @@ export function Pokemons() {
 
   if(copyPokemons)
   return (
-<>
+  <>
       <div className="search-container">
         <Input type="search" placeholder="search pokemon..."
           onChange={(e) => setInputValue(e.target.value.toLowerCase())}
@@ -55,29 +58,34 @@ export function Pokemons() {
     </div>
 
      <div className="container_pokemons">
-      {copyPokemons.map((pokemon) => (
-        <>
-          <Card
-            margin="margin"
-            onClick={() => handleClick(pokemon)}
-            variant="allPok"
-          >
-            <Picture
-              src={pokemon.sprites.other.dream_world.front_default}
-              alt="pokemon_front"
-            />
-            <CardInfo>
-              <span>
-                {pokemon.name}
-              </span>
-            </CardInfo>
-          </Card>
-        </>
-      ))} 
+
+    {copyPokemons.length > 0 ? (
+    copyPokemons.map((pokemon) => (
+    <Card
+      key={pokemon.id} // Assurez-vous d'ajouter une clé unique pour chaque élément dans une liste JSX
+      margin="margin"
+      onClick={() => handleClick(pokemon)}
+      variant="allPok"
+    >
+      <Picture
+        src={pokemon.sprites.other.dream_world.front_default}
+        alt="pokemon_front"
+      />
+      <CardInfo>
+        <span>
+          {pokemon.name}
+        </span>
+      </CardInfo>
+    </Card>
+  ))
+) : (
+  <>
+  <NotFound/>
+  </>
+)}
+
     </div>
-    </> 
+  </> 
   );
-  
-  if(!copyPokemons)
-   return <div>Loading.....</div>
+
 }
