@@ -1,11 +1,16 @@
 img {
     height: 100px;
     width: 200px;
+    image-rendering: -moz-crisp-edges; 
 }
 
 .picture.xl {
     height: 50vh;
     width: 50vh;
+}
+.picture.l {
+    height: 30vh;
+    width: 30vh;
 }
 
 .picture.spinner{

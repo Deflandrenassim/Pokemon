@@ -15,7 +15,6 @@ export function ValidePlayers() {
     function handleValidRegister() {
         if (playerOne && playerTwo === "") {
             setName("Veuillez saisir les noms des joueurs")
-
         }
         else if (playerOne === "" || playerOne === "") {
             setName("Il manque la saisie d'un joueur");
@@ -44,7 +43,7 @@ export function ValidePlayers() {
                     <div className="valide_players_check">
                         <NamePlayers displayName={displayName} playerOne={playerOne} playerTwo={playerTwo} />
                     </div>
-                    <div>
+                    <div className="container-random-pokemons">
                         <RandomPokemon display={displayName} />
                     </div>
                 </div>

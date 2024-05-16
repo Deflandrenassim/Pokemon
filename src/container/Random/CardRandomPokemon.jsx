@@ -9,7 +9,7 @@ export function CardRandomPokemon({ random }) {
     return (
         <div>
             <Card>
-                <Picture src={random.sprites.front_default} alt={random.name} />
+                <Picture src={random.sprites.front_default} size="l" alt={random.name} />
                 <CardInfo>
                     {random.name}
                 </CardInfo>

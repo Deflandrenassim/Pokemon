@@ -1,3 +1,7 @@
+.position-btn-back{
+    margin-top: 20px;
+    right: 10em;
+}
 .pokemon_stat {
     display: flex;
     padding-top: 20px;
